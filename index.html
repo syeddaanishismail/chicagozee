@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChicagoZee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="background-media" aria-hidden="true">
+      <video class="background-video" autoplay muted loop playsinline preload="auto">
+        <source src="assets/background.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <header class="site-header" id="home">
+      <div class="header-inner">
+        <a class="logo-link" href="#home" aria-label="ChicagoZee home">
+          <img class="site-logo" src="assets/logo.png" alt="ChicagoZee" />
+        </a>
+
+        <nav class="site-nav" aria-label="Primary">
+          <a class="nav-link is-active" href="#home">Home</a>
+          <a class="nav-link" href="#about">About &amp; Contact</a>
+        </nav>
+
+        <a class="suggest-button" href="#suggest">Suggest a Spot</a>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="hero-section">
+        <div class="hero-copy-wrap">
+          <h1>Find Zabihah Halal Food in Chicago!</h1>
+          <p class="hero-copy">
+            A simple, minimalist directory of Chicago restaurants. Search by neighborhood,
+            cuisine, or restaurant name.
+          </p>
+
+          <form class="search-bar" id="search-form" role="search">
+            <label class="sr-only" for="search-input">Search restaurants</label>
+            <input
+              id="search-input"
+              type="search"
+              placeholder="Try 'Bucktown', 'Biryani' or 'Bundoo Khan'..."
+              autocomplete="off"
+            />
+            <button type="submit">Search</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="toolbar" aria-label="View controls">
+        <button class="distance-button" id="sort-button" type="button">Sort by distance</button>
+
+        <div class="view-toggle" role="tablist" aria-label="View mode">
+          <button
+            class="view-option is-active"
+            id="grid-view-button"
+            type="button"
+            role="tab"
+            aria-selected="true"
+          >
+            Grid
+          </button>
+          <button
+            class="view-option"
+            id="map-view-button"
+            type="button"
+            role="tab"
+            aria-selected="false"
+          >
+            Map
+          </button>
+        </div>
+      </section>
+
+      <section class="results-section">
+        <div class="results-meta" id="results-copy"></div>
+
+        <div class="card-grid" id="grid-view"></div>
+
+        <section class="map-view hidden" id="map-view" aria-hidden="true">
+          <div class="map-placeholder">
+            <h2>Map view is the next step</h2>
+            <p>
+              The current cards are powered by your real Chicago restaurant dataset. Once we
+              add lat/lng for every restaurant, we can drop in a real interactive map here.
+            </p>
+          </div>
+        </section>
+      </section>
+
+      <section class="info-section" id="about">
+        <div class="info-card">
+          <h2>About &amp; Contact</h2>
+          <p>
+            ChicagoZee is a certification-first directory focused on zabihah halal restaurants
+            in the city of Chicago. The current listing is powered by your curated Chicago
+            restaurant data.
+          </p>
+          <p>
+            For updates, corrections, or questions, add your preferred email or contact form
+            here next.
+          </p>
+        </div>
+      </section>
+
+      <section class="info-section" id="suggest">
+        <div class="info-card">
+          <h2>Suggest a Spot</h2>
+          <p>
+            This section is ready for your submission form. Next, we can connect it to Supabase
+            so people can suggest new Chicago restaurants for review.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <template id="restaurant-card-template">
+      <article class="restaurant-card">
+        <div class="card-image-wrap">
+          <img class="card-image" src="" alt="" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <h2 class="card-title"></h2>
+          <p class="card-subtitle"></p>
+          <div class="card-badge-row">
+            <span class="card-badge"></span>
+          </div>
+          <div class="card-photo-credit hidden">
+            <a class="card-photo-credit-link" href="" target="_blank" rel="noreferrer"></a>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script src="restaurants.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
