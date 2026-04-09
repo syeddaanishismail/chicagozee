@@ -24,13 +24,32 @@
           <img class="site-logo" src="assets/logo.png" alt="ChicagoZee" />
         </a>
 
+        <a class="suggest-button suggest-button-mobile" href="#suggest">Suggest a Spot</a>
+
         <nav class="site-nav" aria-label="Primary">
           <a class="nav-link is-active" href="#home">Home</a>
           <a class="nav-link" href="#about">About &amp; Contact</a>
         </nav>
 
         <a class="suggest-button" href="#suggest">Suggest a Spot</a>
+
+        <button
+          class="mobile-menu-button"
+          id="mobile-menu-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-nav-menu"
+          aria-label="Open navigation menu"
+        >
+          <span class="mobile-menu-button-label">Menu</span>
+          <span class="mobile-menu-button-icon" aria-hidden="true"></span>
+        </button>
       </div>
+
+      <nav class="mobile-nav-menu hidden" id="mobile-nav-menu" aria-label="Mobile">
+        <a class="mobile-nav-link" href="#home">Home</a>
+        <a class="mobile-nav-link" href="#about">About &amp; Contact</a>
+      </nav>
     </header>
 
     <main class="page-shell">

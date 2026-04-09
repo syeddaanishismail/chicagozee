@@ -15,6 +15,9 @@ const searchInput = document.getElementById("search-input");
 const sortButton = document.getElementById("sort-button");
 const gridViewButton = document.getElementById("grid-view-button");
 const mapViewButton = document.getElementById("map-view-button");
+const mobileMenuButton = document.getElementById("mobile-menu-button");
+const mobileNavMenu = document.getElementById("mobile-nav-menu");
+const mobileNavLinks = Array.from(document.querySelectorAll(".mobile-nav-link"));
 
 const fallbackImages = ["assets/card-1.png", "assets/card-2.png", "assets/card-3.png"];
 
@@ -114,6 +117,33 @@ sortButton.addEventListener("click", () => {
 
 gridViewButton.addEventListener("click", () => setView(true));
 mapViewButton.addEventListener("click", () => setView(false));
+
+function closeMobileMenu() {
+  if (!mobileMenuButton || !mobileNavMenu) {
+    return;
+  }
+
+  mobileMenuButton.setAttribute("aria-expanded", "false");
+  mobileNavMenu.classList.add("hidden");
+}
+
+if (mobileMenuButton && mobileNavMenu) {
+  mobileMenuButton.addEventListener("click", () => {
+    const isOpen = mobileMenuButton.getAttribute("aria-expanded") === "true";
+    mobileMenuButton.setAttribute("aria-expanded", String(!isOpen));
+    mobileNavMenu.classList.toggle("hidden", isOpen);
+  });
+
+  mobileNavLinks.forEach((link) => {
+    link.addEventListener("click", closeMobileMenu);
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 1139) {
+      closeMobileMenu();
+    }
+  });
+}
 
 setView(true);
 renderGrid();
