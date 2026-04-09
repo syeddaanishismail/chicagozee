@@ -849,6 +849,7 @@ button {
   .search-bar {
     grid-template-columns: minmax(0, 1fr) 150px;
     min-height: 54px;
+    margin-top: 46px;
     padding: 7px 8px 7px 14px;
     border-radius: 26px;
   }
