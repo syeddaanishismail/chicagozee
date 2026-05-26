@@ -10,6 +10,12 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -74,45 +80,43 @@
         </div>
       </section>
 
-      <section class="toolbar" aria-label="View controls">
-        <button class="distance-button" id="sort-button" type="button">Sort by distance</button>
-
-        <div class="view-toggle" role="tablist" aria-label="View mode">
-          <button
-            class="view-option is-active"
-            id="grid-view-button"
-            type="button"
-            role="tab"
-            aria-selected="true"
-          >
-            Grid
-          </button>
-          <button
-            class="view-option"
-            id="map-view-button"
-            type="button"
-            role="tab"
-            aria-selected="false"
-          >
-            Map
-          </button>
-        </div>
-      </section>
-
       <section class="results-section">
-        <div class="results-meta" id="results-copy"></div>
+        <div class="results-filters" aria-label="Results filters">
+          <div class="search-dock-slot" id="search-dock-slot" aria-hidden="true"></div>
+          <label class="filter-field filter-select" for="area-filter">
+            <span class="sr-only">Filter by area</span>
+            <select id="area-filter">
+              <option value="">All areas</option>
+            </select>
+          </label>
+          <label class="filter-field filter-select" for="status-filter">
+            <span class="sr-only">Filter by status</span>
+            <select id="status-filter">
+              <option value="">All statuses</option>
+            </select>
+          </label>
+          <button class="filter-reset" id="filters-reset-button" type="button">Reset</button>
+        </div>
 
-        <div class="card-grid" id="grid-view"></div>
-
-        <section class="map-view hidden" id="map-view" aria-hidden="true">
-          <div class="map-placeholder">
-            <h2>Map view is the next step</h2>
-            <p>
-              The current cards are powered by your real Chicago restaurant dataset. Once we
-              add lat/lng for every restaurant, we can drop in a real interactive map here.
-            </p>
+        <div class="results-layout">
+          <div class="results-sidebar">
+            <div class="results-meta" id="results-copy"></div>
+            <div class="card-grid" id="grid-view"></div>
           </div>
-        </section>
+
+          <section class="map-view" id="map-view" aria-hidden="false">
+            <div class="map-shell">
+              <div class="map-header">
+                <h2>Chicago Map</h2>
+                <p>
+                  Showing restaurants with coordinates. If a spot is missing, it
+                  just needs lat/lng added to the dataset.
+                </p>
+              </div>
+              <div id="map" class="map-canvas" role="application" aria-label="Map view"></div>
+            </div>
+          </section>
+        </div>
       </section>
 
       <section class="info-section" id="about">
@@ -143,9 +147,6 @@
 
     <template id="restaurant-card-template">
       <article class="restaurant-card">
-        <div class="card-image-wrap">
-          <img class="card-image" src="" alt="" loading="lazy" />
-        </div>
         <div class="card-body">
           <h2 class="card-title"></h2>
           <p class="card-subtitle"></p>
@@ -159,6 +160,11 @@
       </article>
     </template>
 
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
     <script src="restaurants.js"></script>
     <script src="app.js"></script>
   </body>

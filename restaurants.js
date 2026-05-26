@@ -8,7 +8,9 @@ window.RESTAURANTS = [
     "image": "assets/card-1.png",
     "imageAlt": "",
     "googlePlaceId": "",
-    "googleMapsUri": ""
+    "googleMapsUri": "",
+    "lat": 41.9109081,
+    "lng": -87.6404856
   },
   {
     "name": "Al Kabeer Restaurant",
@@ -19,7 +21,9 @@ window.RESTAURANTS = [
     "image": "assets/card-2.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJm3fJN4zRD4gRHkjQbf-YoQs",
-    "googleMapsUri": "https://maps.google.com/?cid=838119228494071838&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=838119228494071838&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 41.9985817,
+    "lng": -87.6902169
   },
   {
     "name": "Al Safa (Restaurant)",
@@ -30,7 +34,9 @@ window.RESTAURANTS = [
     "image": "assets/card-3.png",
     "imageAlt": "",
     "googlePlaceId": "",
-    "googleMapsUri": ""
+    "googleMapsUri": "",
+    "lat": 42.0122106,
+    "lng": -87.7086424
   },
   {
     "name": "Al Yemen Al Saeed",
@@ -41,7 +47,9 @@ window.RESTAURANTS = [
     "image": "assets/card-1.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJe0IOdubND4gRUMlFK1R2-GI",
-    "googleMapsUri": "https://maps.google.com/?cid=7131580113816504656&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=7131580113816504656&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 41.9759097,
+    "lng": -87.7155352
   },
   {
     "name": "Ali Nihari",
@@ -52,7 +60,9 @@ window.RESTAURANTS = [
     "image": "assets/card-2.png",
     "imageAlt": "",
     "googlePlaceId": "",
-    "googleMapsUri": ""
+    "googleMapsUri": "",
+    "lat": 41.9978707,
+    "lng": -87.6943498
   },
   {
     "name": "Bar.B.Q Tonight",
@@ -63,7 +73,9 @@ window.RESTAURANTS = [
     "image": "assets/card-3.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJP7FFFQDRD4gR_AK8KbA3A0Q",
-    "googleMapsUri": "https://maps.google.com/?cid=4900822049263190780&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=4900822049263190780&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 41.9974158,
+    "lng": -87.6932607
   },
   {
     "name": "Bundoo Khan Restaurant",
@@ -74,7 +86,9 @@ window.RESTAURANTS = [
     "image": "assets/card-1.png",
     "imageAlt": "",
     "googlePlaceId": "",
-    "googleMapsUri": ""
+    "googleMapsUri": "",
+    "lat": 41.9973257,
+    "lng": -87.6937348
   },
   {
     "name": "Burger Zone",
@@ -85,7 +99,9 @@ window.RESTAURANTS = [
     "image": "assets/card-2.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJn45juYHND4gRTWJDD9EZwD0",
-    "googleMapsUri": "https://maps.google.com/?cid=4449584817536983629&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=4449584817536983629&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 41.975778,
+    "lng": -87.713136
   },
   {
     "name": "Byrd's Hot Chicken Chicago",
@@ -96,7 +112,9 @@ window.RESTAURANTS = [
     "image": "assets/card-3.png",
     "imageAlt": "",
     "googlePlaceId": "",
-    "googleMapsUri": ""
+    "googleMapsUri": "",
+    "lat": 41.9305211,
+    "lng": -87.6439651
   },
   {
     "name": "Byrd's Hot Chicken Union Station",
@@ -107,7 +125,9 @@ window.RESTAURANTS = [
     "image": "assets/card-1.png",
     "imageAlt": "",
     "googlePlaceId": "",
-    "googleMapsUri": ""
+    "googleMapsUri": "",
+    "lat": 41.8774257,
+    "lng": -87.6423515
   },
   {
     "name": "Chi Tea",
@@ -118,7 +138,9 @@ window.RESTAURANTS = [
     "image": "assets/card-2.png",
     "imageAlt": "",
     "googlePlaceId": "",
-    "googleMapsUri": ""
+    "googleMapsUri": "",
+    "lat": 42.0002703,
+    "lng": -87.6609885
   },
   {
     "name": "Dastarkhwan",
@@ -129,7 +151,9 @@ window.RESTAURANTS = [
     "image": "assets/card-3.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJ6_lgtAnRD4gRexfcTVaoamU",
-    "googleMapsUri": "https://maps.google.com/?cid=7307838433988974459&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=7307838433988974459&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 41.9983609,
+    "lng": -87.6900123
   },
   {
     "name": "Delhi Darbar",
@@ -140,7 +164,9 @@ window.RESTAURANTS = [
     "image": "assets/card-1.png",
     "imageAlt": "",
     "googlePlaceId": "",
-    "googleMapsUri": ""
+    "googleMapsUri": "",
+    "lat": 41.997551,
+    "lng": -87.704883
   },
   {
     "name": "Drippin Bites",
@@ -151,7 +177,9 @@ window.RESTAURANTS = [
     "image": "assets/card-2.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJ5Y_nVrHRD4gR4kdKnPCvFjI",
-    "googleMapsUri": "https://maps.google.com/?cid=3609265599333156834&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=3609265599333156834&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 42.0057284,
+    "lng": -87.6610777
   },
   {
     "name": "Firebird Piri Piri Grill",
@@ -162,7 +190,9 @@ window.RESTAURANTS = [
     "image": "assets/card-3.png",
     "imageAlt": "",
     "googlePlaceId": "",
-    "googleMapsUri": ""
+    "googleMapsUri": "",
+    "lat": 41.9643853,
+    "lng": -87.6611124
   },
   {
     "name": "Flamin Bites",
@@ -173,7 +203,9 @@ window.RESTAURANTS = [
     "image": "assets/card-1.png",
     "imageAlt": "",
     "googlePlaceId": "",
-    "googleMapsUri": ""
+    "googleMapsUri": "",
+    "lat": 41.9329526,
+    "lng": -87.6491309
   },
   {
     "name": "Fried Junction",
@@ -184,7 +216,9 @@ window.RESTAURANTS = [
     "image": "assets/card-2.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJPwlj_rXRD4gRGnfR98PBDHA",
-    "googleMapsUri": "https://maps.google.com/?cid=8074041279388940058&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=8074041279388940058&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 41.9974951,
+    "lng": -87.6884294
   },
   {
     "name": "Ghareeb Nawaz Restaurant",
@@ -195,7 +229,9 @@ window.RESTAURANTS = [
     "image": "assets/card-3.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJ855DdcHRD4gRo6iEljO2bUc",
-    "googleMapsUri": "https://maps.google.com/?cid=5146970281839208611&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=5146970281839208611&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 41.9980708,
+    "lng": -87.6815765
   },
   {
     "name": "Ghareeb Nawaz UIC",
@@ -206,7 +242,9 @@ window.RESTAURANTS = [
     "image": "assets/card-1.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJQ5WH6-8sDogRiOSiAaMLbus",
-    "googleMapsUri": "https://maps.google.com/?cid=16964509641086264456&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=16964509641086264456&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 41.8665953,
+    "lng": -87.6473115
   },
   {
     "name": "Hadramout Restaurant & Bakery",
@@ -217,7 +255,9 @@ window.RESTAURANTS = [
     "image": "assets/card-2.png",
     "imageAlt": "",
     "googlePlaceId": "",
-    "googleMapsUri": ""
+    "googleMapsUri": "",
+    "lat": 41.9977241,
+    "lng": -87.7072509
   },
   {
     "name": "Halal Food Studio",
@@ -228,7 +268,9 @@ window.RESTAURANTS = [
     "image": "assets/card-3.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJWwDmHwzRD4gRXMMk_5VgbmM",
-    "googleMapsUri": "https://maps.google.com/?cid=7164770254540030812&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=7164770254540030812&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 41.997983,
+    "lng": -87.6861236
   },
   {
     "name": "Halal Smash Burger & Phillies",
@@ -239,7 +281,9 @@ window.RESTAURANTS = [
     "image": "assets/card-1.png",
     "imageAlt": "",
     "googlePlaceId": "",
-    "googleMapsUri": ""
+    "googleMapsUri": "",
+    "lat": 41.9728917,
+    "lng": -87.6886804
   },
   {
     "name": "Halal Smash Burger & Phillies",
@@ -250,7 +294,9 @@ window.RESTAURANTS = [
     "image": "assets/card-2.png",
     "imageAlt": "",
     "googlePlaceId": "",
-    "googleMapsUri": ""
+    "googleMapsUri": "",
+    "lat": 41.99772,
+    "lng": -87.6997585
   },
   {
     "name": "Halaleez NY Chicken & Gyro Rice Bowls",
@@ -261,7 +307,9 @@ window.RESTAURANTS = [
     "image": "assets/card-3.png",
     "imageAlt": "",
     "googlePlaceId": "",
-    "googleMapsUri": ""
+    "googleMapsUri": "",
+    "lat": 41.876644,
+    "lng": -87.6332966
   },
   {
     "name": "House of Biryani",
@@ -272,7 +320,9 @@ window.RESTAURANTS = [
     "image": "assets/card-1.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJ-VLLABrRD4gR323fqUjmwxE",
-    "googleMapsUri": "https://maps.google.com/?cid=1280119918865378783&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=1280119918865378783&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 41.9979475,
+    "lng": -87.687878
   },
   {
     "name": "Hyderabad House Devon",
@@ -283,7 +333,9 @@ window.RESTAURANTS = [
     "image": "assets/card-2.png",
     "imageAlt": "",
     "googlePlaceId": "",
-    "googleMapsUri": ""
+    "googleMapsUri": "",
+    "lat": 41.9975523,
+    "lng": -87.6858577
   },
   {
     "name": "Hyderabad Kitchen",
@@ -294,7 +346,9 @@ window.RESTAURANTS = [
     "image": "assets/card-3.png",
     "imageAlt": "",
     "googlePlaceId": "",
-    "googleMapsUri": ""
+    "googleMapsUri": "",
+    "lat": 41.9947612,
+    "lng": -87.6996523
   },
   {
     "name": "Indian Street Food by Tawakkul",
@@ -305,7 +359,9 @@ window.RESTAURANTS = [
     "image": "assets/card-1.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJX0qi0KLRD4gRerC_FTFF2CM",
-    "googleMapsUri": "https://maps.google.com/?cid=2582890463417577594&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=2582890463417577594&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 41.9975144,
+    "lng": -87.691476
   },
   {
     "name": "JK Kabab Express (Devon)",
@@ -316,7 +372,9 @@ window.RESTAURANTS = [
     "image": "assets/card-2.png",
     "imageAlt": "",
     "googlePlaceId": "",
-    "googleMapsUri": ""
+    "googleMapsUri": "",
+    "lat": 41.9979349,
+    "lng": -87.6929083
   },
   {
     "name": "Kabab King Grill",
@@ -327,7 +385,9 @@ window.RESTAURANTS = [
     "image": "assets/card-3.png",
     "imageAlt": "",
     "googlePlaceId": "",
-    "googleMapsUri": ""
+    "googleMapsUri": "",
+    "lat": 41.9976841,
+    "lng": -87.6877347
   },
   {
     "name": "Khan BBQ",
@@ -338,7 +398,9 @@ window.RESTAURANTS = [
     "image": "assets/card-1.png",
     "imageAlt": "",
     "googlePlaceId": "",
-    "googleMapsUri": ""
+    "googleMapsUri": "",
+    "lat": 41.9975778,
+    "lng": -87.6901854
   },
   {
     "name": "Mintza",
@@ -349,7 +411,9 @@ window.RESTAURANTS = [
     "image": "assets/card-2.png",
     "imageAlt": "",
     "googlePlaceId": "",
-    "googleMapsUri": ""
+    "googleMapsUri": "",
+    "lat": 41.9975137,
+    "lng": -87.6867804
   },
   {
     "name": "Nawaz Gulshan",
@@ -360,7 +424,9 @@ window.RESTAURANTS = [
     "image": "assets/card-3.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJhZQn4NDRD4gRVY2nw9VgOlg",
-    "googleMapsUri": "https://maps.google.com/?cid=6357500295213714773&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=6357500295213714773&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 41.9947955,
+    "lng": -87.6896771
   },
   {
     "name": "New Naan on Devon",
@@ -371,7 +437,9 @@ window.RESTAURANTS = [
     "image": "assets/card-1.png",
     "imageAlt": "",
     "googlePlaceId": "",
-    "googleMapsUri": ""
+    "googleMapsUri": "",
+    "lat": 41.9976158,
+    "lng": -87.6866074
   },
   {
     "name": "New Zaiqa",
@@ -382,7 +450,9 @@ window.RESTAURANTS = [
     "image": "assets/card-2.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJIbkvjGbTD4gRwyg2Bgec16k",
-    "googleMapsUri": "https://maps.google.com/?cid=12238422066385529027&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=12238422066385529027&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 41.905887,
+    "lng": -87.6429863
   },
   {
     "name": "NYC Halal Eats",
@@ -393,7 +463,9 @@ window.RESTAURANTS = [
     "image": "assets/card-3.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJiyZdpj3RD4gRXDjd-2MLsmk",
-    "googleMapsUri": "https://maps.google.com/?cid=7616162443892176988&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=7616162443892176988&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 41.997533,
+    "lng": -87.6964885
   },
   {
     "name": "Pak Sweets on Devon",
@@ -404,7 +476,9 @@ window.RESTAURANTS = [
     "image": "assets/card-1.png",
     "imageAlt": "",
     "googlePlaceId": "",
-    "googleMapsUri": ""
+    "googleMapsUri": "",
+    "lat": 41.997849,
+    "lng": -87.688545
   },
   {
     "name": "Pita Pita Mediterranean Grill",
@@ -415,7 +489,9 @@ window.RESTAURANTS = [
     "image": "assets/card-2.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJseo9ZbMtDogR_tiNgwplyoY",
-    "googleMapsUri": "https://maps.google.com/?cid=9712686642209085694&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=9712686642209085694&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 41.8845913,
+    "lng": -87.6340733
   },
   {
     "name": "Pita Pita Mediterranean Grill",
@@ -426,7 +502,9 @@ window.RESTAURANTS = [
     "image": "assets/card-3.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJr7o_p-EtDogR1k5B-bf-Tn8",
-    "googleMapsUri": "https://maps.google.com/?cid=9173549557114556118&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=9173549557114556118&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 41.873006,
+    "lng": -87.6773672
   },
   {
     "name": "Rickshaw Pakistani & Indian Street Eats",
@@ -437,7 +515,9 @@ window.RESTAURANTS = [
     "image": "assets/card-1.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJF7U3i7PND4gRVMNmaqGucOw",
-    "googleMapsUri": "https://maps.google.com/?cid=17037309398640673620&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=17037309398640673620&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 41.9593779,
+    "lng": -87.7279358
   },
   {
     "name": "Ruman Chai Shai & Restaurant",
@@ -448,7 +528,9 @@ window.RESTAURANTS = [
     "image": "assets/card-2.png",
     "imageAlt": "",
     "googlePlaceId": "",
-    "googleMapsUri": ""
+    "googleMapsUri": "",
+    "lat": 41.9965695,
+    "lng": -87.6911802
   },
   {
     "name": "Sabri Nihari",
@@ -459,7 +541,9 @@ window.RESTAURANTS = [
     "image": "assets/card-3.png",
     "imageAlt": "",
     "googlePlaceId": "",
-    "googleMapsUri": ""
+    "googleMapsUri": "",
+    "lat": 41.9979879,
+    "lng": -87.6925552
   },
   {
     "name": "Saffron & Salsa",
@@ -470,7 +554,9 @@ window.RESTAURANTS = [
     "image": "assets/card-1.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJCYiUgfjTD4gRcPXrNSrd7tA",
-    "googleMapsUri": "https://maps.google.com/?cid=15055213777709167984&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=15055213777709167984&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 41.9469201,
+    "lng": -87.6881529
   },
   {
     "name": "SALT burgers + fries",
@@ -481,7 +567,9 @@ window.RESTAURANTS = [
     "image": "assets/card-2.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJRWtUROzTD4gRtQh9dcEbKLI",
-    "googleMapsUri": "https://maps.google.com/?cid=12837541255533365429&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=12837541255533365429&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 41.9106162,
+    "lng": -87.6759778
   },
   {
     "name": "SALT burgers + fries",
@@ -492,7 +580,9 @@ window.RESTAURANTS = [
     "image": "assets/card-3.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJx4QCltbRD4gRu-QaEh2oriw",
-    "googleMapsUri": "https://maps.google.com/?cid=3219695626427753659&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=3219695626427753659&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 42.0018273,
+    "lng": -87.6609677
   },
   {
     "name": "Serena Restaurant",
@@ -503,7 +593,9 @@ window.RESTAURANTS = [
     "image": "assets/card-1.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJlfzvLd3RD4gR-b0cL6G6U5o",
-    "googleMapsUri": "https://maps.google.com/?cid=11120437106350800377&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=11120437106350800377&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 41.9978773,
+    "lng": -87.6938361
   },
   {
     "name": "Tabaq Restaurant",
@@ -514,7 +606,9 @@ window.RESTAURANTS = [
     "image": "assets/card-2.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJd5wenTfTD4gR12h2iKWrxwc",
-    "googleMapsUri": "https://maps.google.com/?cid=560605406078331095&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=560605406078331095&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 41.9048364,
+    "lng": -87.640576
   },
   {
     "name": "Tanoor Kabob",
@@ -525,7 +619,9 @@ window.RESTAURANTS = [
     "image": "assets/card-3.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJ91FeqrQtDogRTx5j_3nDTUg",
-    "googleMapsUri": "https://maps.google.com/?cid=5210035272680676943&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=5210035272680676943&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 41.8497528,
+    "lng": -87.705457
   },
   {
     "name": "Tawakkul Restaurant",
@@ -536,7 +632,9 @@ window.RESTAURANTS = [
     "image": "assets/card-1.png",
     "imageAlt": "",
     "googlePlaceId": "",
-    "googleMapsUri": ""
+    "googleMapsUri": "",
+    "lat": 41.9979996,
+    "lng": -87.6894946
   },
   {
     "name": "Thali Corner",
@@ -547,7 +645,9 @@ window.RESTAURANTS = [
     "image": "assets/card-2.png",
     "imageAlt": "",
     "googlePlaceId": "",
-    "googleMapsUri": ""
+    "googleMapsUri": "",
+    "lat": 41.997825,
+    "lng": -87.6890922
   },
   {
     "name": "The Halal Burger",
@@ -558,7 +658,9 @@ window.RESTAURANTS = [
     "image": "assets/card-3.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJg0P2nR_OD4gRmp-k8AOMc7U",
-    "googleMapsUri": "https://maps.google.com/?cid=13074948091736792986&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=13074948091736792986&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 41.9949846,
+    "lng": -87.6999518
   },
   {
     "name": "Tim Tim's Halal Grill",
@@ -569,7 +671,9 @@ window.RESTAURANTS = [
     "image": "assets/card-1.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJvYTouTrND4gRuccr5Ls5QfE",
-    "googleMapsUri": "https://maps.google.com/?cid=17384239515776567225&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=17384239515776567225&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 41.9610684,
+    "lng": -87.7318725
   },
   {
     "name": "Usmania Chinese Restaurant",
@@ -580,7 +684,9 @@ window.RESTAURANTS = [
     "image": "assets/card-2.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJC-gL2sLRD4gRirqqczWhjDQ",
-    "googleMapsUri": "https://maps.google.com/?cid=3786578637657651850&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=3786578637657651850&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 41.997587,
+    "lng": -87.6870677
   },
   {
     "name": "Usmania Fine Dining",
@@ -591,6 +697,8 @@ window.RESTAURANTS = [
     "image": "assets/card-3.png",
     "imageAlt": "",
     "googlePlaceId": "ChIJsXGF2MLRD4gRAnhcpO-Mu0w",
-    "googleMapsUri": "https://maps.google.com/?cid=5529167928410011650&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "googleMapsUri": "https://maps.google.com/?cid=5529167928410011650&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 41.9980925,
+    "lng": -87.686887
   }
 ];
