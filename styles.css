@@ -390,6 +390,7 @@ button {
 
 .results-section {
   margin-top: 0;
+  scroll-margin-top: 104px;
 }
 
 @media (min-width: 1140px) {
@@ -542,7 +543,8 @@ button {
 }
 
 .map-mode .results-sidebar {
-  max-height: calc(100vh - 235px);
+  height: calc(100vh - 166px);
+  max-height: calc(100vh - 166px);
   overflow-y: auto;
   padding-right: 0;
   background: #ffffff;
@@ -553,10 +555,11 @@ button {
   top: 0;
   margin: 0;
   min-height: 0;
-  padding: 12px 16px;
+  padding: 7px 16px 16px;
   background: var(--white);
   z-index: 2;
   border-bottom: 1px solid #ececec;
+  line-height: 1.2;
 }
 
 .map-mode .map-shell {
@@ -723,6 +726,138 @@ button {
 }
 .info-card p + p {
   margin-top: 12px;
+}
+
+.suggest-card {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.suggest-copy p {
+  max-width: 420px;
+}
+
+.suggest-form {
+  display: grid;
+  gap: 16px;
+}
+
+.suggest-trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.suggest-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.suggest-field {
+  display: grid;
+  gap: 7px;
+  color: #202020;
+  font-family: Avenir, "Avenir Next", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.suggest-field input,
+.suggest-field select,
+.suggest-field textarea {
+  width: 100%;
+  border: 2px solid var(--line);
+  border-radius: 18px;
+  background: #f8f8f8;
+  color: #202020;
+  font: inherit;
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: 0;
+  outline: 0;
+}
+
+.suggest-field input,
+.suggest-field select {
+  min-height: 50px;
+  padding: 0 16px;
+}
+
+.suggest-field textarea {
+  min-height: 116px;
+  padding: 14px 16px;
+  resize: vertical;
+}
+
+.suggest-field input:focus,
+.suggest-field select:focus,
+.suggest-field textarea:focus {
+  box-shadow: 0 0 0 3px rgba(187, 220, 241, 0.9);
+}
+
+.suggest-confirm {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #303030;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.suggest-confirm input {
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  accent-color: var(--red);
+  flex: 0 0 auto;
+}
+
+.suggest-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.suggest-actions button {
+  min-height: 46px;
+  padding: 0 24px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: var(--light-blue);
+  color: #17171b;
+  font-family: Avenir, "Avenir Next", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.suggest-actions button:disabled {
+  cursor: wait;
+  opacity: 0.68;
+}
+
+.suggest-status {
+  min-height: 20px;
+  margin: 0;
+  color: #5d5d5d;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.suggest-status.is-success {
+  color: #246b3d;
+}
+
+.suggest-status.is-error {
+  color: var(--red);
 }
 
 .empty-state {
@@ -1018,6 +1153,11 @@ button {
   .map-shell,
   .info-card {
     padding: 22px;
+  }
+
+  .suggest-card,
+  .suggest-form-grid {
+    grid-template-columns: 1fr;
   }
 
   .map-canvas {

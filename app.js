@@ -21,6 +21,8 @@ const statusFilter = document.getElementById("status-filter");
 const filtersResetButton = document.getElementById("filters-reset-button");
 const resultsFilters = document.querySelector(".results-filters");
 const searchDockSlot = document.getElementById("search-dock-slot");
+const suggestForm = document.getElementById("suggest-form");
+const suggestStatus = document.getElementById("suggest-status");
 
 let leafletMap = null;
 let leafletLayer = null;
@@ -284,9 +286,6 @@ if (filtersResetButton) {
     if (searchInput) {
       searchInput.value = "";
     }
-    if (listSearchInput) {
-      listSearchInput.value = "";
-    }
     if (areaFilter) {
       areaFilter.value = "";
     }
@@ -295,6 +294,105 @@ if (filtersResetButton) {
     }
     renderGrid();
     initMap();
+  });
+}
+
+function getSuggestionEmail() {
+  const configuredEmail = window.CHICAGOZEE_CONFIG && window.CHICAGOZEE_CONFIG.suggestionEmail;
+  return configuredEmail || "syeddaanishismail@gmail.com";
+}
+
+function getSuggestionBody(data) {
+  return [
+    "New ChicagoZee spot suggestion",
+    "",
+    `Spot name: ${data.get("spotName")}`,
+    `Address or neighborhood: ${data.get("location")}`,
+    `Halal info: ${data.get("halalInfo")}`,
+    `Submitter contact: ${data.get("contact") || "Not provided"}`,
+    "",
+    "Notes:",
+    data.get("notes") || "Not provided",
+  ].join("\n");
+}
+
+function setSuggestionStatus(message, tone = "") {
+  if (!suggestStatus) {
+    return;
+  }
+
+  suggestStatus.textContent = message;
+  suggestStatus.classList.toggle("is-success", tone === "success");
+  suggestStatus.classList.toggle("is-error", tone === "error");
+}
+
+function getSuggestionPayload(data) {
+  return {
+    _subject: `ChicagoZee spot suggestion: ${data.get("spotName")}`,
+    _template: "table",
+    _captcha: "false",
+    "Spot name": data.get("spotName"),
+    "Address or neighborhood": data.get("location"),
+    "Halal info": data.get("halalInfo"),
+    "Submitter contact": data.get("contact") || "Not provided",
+    Notes: data.get("notes") || "Not provided",
+    "Halal confirmation": "This spot serves halal food or has halal options.",
+    Message: getSuggestionBody(data),
+  };
+}
+
+if (suggestForm) {
+  suggestForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    if (!suggestForm.reportValidity()) {
+      return;
+    }
+
+    const data = new FormData(suggestForm);
+    const honeypot = String(data.get("website") || "").trim();
+    if (honeypot) {
+      suggestForm.reset();
+      setSuggestionStatus("Thanks. The suggestion was sent.", "success");
+      return;
+    }
+
+    const recipient = getSuggestionEmail();
+    const submitButton = suggestForm.querySelector('button[type="submit"]');
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = "Sending...";
+    }
+    setSuggestionStatus("Sending your suggestion...", "");
+
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${recipient}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(getSuggestionPayload(data)),
+      });
+
+      if (!response.ok) {
+        throw new Error("Suggestion request failed");
+      }
+
+      suggestForm.reset();
+      setSuggestionStatus("Thanks. The suggestion was sent.", "success");
+    } catch (error) {
+      setSuggestionStatus(
+        "Something went wrong. Please try again in a moment.",
+        "error"
+      );
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = "Send Suggestion";
+      }
+    }
   });
 }
 

@@ -33,7 +33,7 @@
         <a class="suggest-button suggest-button-mobile" href="#suggest">Suggest a Spot</a>
 
         <nav class="site-nav" aria-label="Primary">
-          <a class="nav-link is-active" href="#home">Home</a>
+          <a class="nav-link is-active" href="#search">Home</a>
           <a class="nav-link" href="#about">About &amp; Contact</a>
         </nav>
 
@@ -53,7 +53,7 @@
       </div>
 
       <nav class="mobile-nav-menu hidden" id="mobile-nav-menu" aria-label="Mobile">
-        <a class="mobile-nav-link" href="#home">Home</a>
+        <a class="mobile-nav-link" href="#search">Home</a>
         <a class="mobile-nav-link" href="#about">About &amp; Contact</a>
       </nav>
     </header>
@@ -80,7 +80,7 @@
         </div>
       </section>
 
-      <section class="results-section">
+      <section class="results-section" id="search">
         <div class="results-filters" aria-label="Results filters">
           <div class="search-dock-slot" id="search-dock-slot" aria-hidden="true"></div>
           <label class="filter-field filter-select" for="area-filter">
@@ -135,12 +135,69 @@
       </section>
 
       <section class="info-section" id="suggest">
-        <div class="info-card">
-          <h2>Suggest a Spot</h2>
-          <p>
-            This section is ready for your submission form. Next, we can connect it to Supabase
-            so people can suggest new Chicago restaurants for review.
-          </p>
+        <div class="info-card suggest-card">
+          <div class="suggest-copy">
+            <h2>Suggest a Spot</h2>
+            <p>
+              Know a halal restaurant that should be on ChicagoZee? Send the name,
+              location, and what makes it halal so it can be reviewed before it goes live.
+            </p>
+          </div>
+
+          <form class="suggest-form" id="suggest-form">
+            <label class="suggest-trap" for="suggest-website">
+              <span>Website</span>
+              <input id="suggest-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+            </label>
+
+            <div class="suggest-form-grid">
+              <label class="suggest-field" for="suggest-name">
+                <span>Spot name</span>
+                <input id="suggest-name" name="spotName" type="text" autocomplete="organization" required />
+              </label>
+
+              <label class="suggest-field" for="suggest-location">
+                <span>Address or neighborhood</span>
+                <input id="suggest-location" name="location" type="text" autocomplete="street-address" required />
+              </label>
+
+              <label class="suggest-field" for="suggest-proof">
+                <span>Halal info</span>
+                <select id="suggest-proof" name="halalInfo" required>
+                  <option value="">Choose one</option>
+                  <option value="Certified halal">Certified halal</option>
+                  <option value="Muslim-owned">Muslim-owned</option>
+                  <option value="Halal menu/items">Halal menu/items</option>
+                  <option value="Needs verification">Needs verification</option>
+                </select>
+              </label>
+
+              <label class="suggest-field" for="suggest-contact">
+                <span>Your contact</span>
+                <input id="suggest-contact" name="contact" type="text" autocomplete="email" placeholder="Optional" />
+              </label>
+            </div>
+
+            <label class="suggest-field suggest-field-wide" for="suggest-notes">
+              <span>Notes</span>
+              <textarea
+                id="suggest-notes"
+                name="notes"
+                rows="4"
+                placeholder="Menu link, certification source, Instagram, or anything helpful"
+              ></textarea>
+            </label>
+
+            <label class="suggest-confirm">
+              <input id="suggest-halal-confirm" name="halalConfirm" type="checkbox" required />
+              <span>This spot serves halal food or has halal options.</span>
+            </label>
+
+            <div class="suggest-actions">
+              <button type="submit">Send Suggestion</button>
+              <p class="suggest-status" id="suggest-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
         </div>
       </section>
     </main>
