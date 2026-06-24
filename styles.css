@@ -48,6 +48,29 @@ body {
   opacity: 0.95;
 }
 
+.background-credit {
+  position: absolute;
+  right: 18px;
+  top: 14px;
+  z-index: 1;
+  padding: 3px 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.28);
+  color: rgba(17, 17, 17, 0.48);
+  font-family: "Inter", "Avenir Next", sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  pointer-events: auto;
+}
+
+.background-credit:hover,
+.background-credit:focus-visible {
+  color: rgba(17, 17, 17, 0.74);
+  background: rgba(255, 255, 255, 0.52);
+}
+
 .site-header,
 .page-shell {
   position: relative;
@@ -286,14 +309,29 @@ button {
   max-width: 680px;
   min-height: 64px;
   margin: 40px auto 0;
-  padding: 6px 12px 6px 22px;
+  position: relative;
+  padding: 6px 12px 6px 58px;
   display: grid;
-  grid-template-columns: 1fr 156px;
-  gap: 18px;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  gap: 12px;
   align-items: center;
   border: 2px solid var(--line);
   border-radius: 999px;
   background: var(--white);
+}
+
+.search-bar::before {
+  content: "";
+  position: absolute;
+  left: 26px;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  background: #111111;
+  transform: translateY(-50%);
+  pointer-events: none;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M10.6 3.5a7.1 7.1 0 1 0 0 14.2 7.1 7.1 0 0 0 0-14.2Zm0 2.2a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8Z'/%3E%3Cpath d='M15.6 14.2 21 19.6 19.5 21l-5.4-5.4 1.5-1.4Z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M10.6 3.5a7.1 7.1 0 1 0 0 14.2 7.1 7.1 0 0 0 0-14.2Zm0 2.2a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8Z'/%3E%3Cpath d='M15.6 14.2 21 19.6 19.5 21l-5.4-5.4 1.5-1.4Z'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
 .search-bar input {
@@ -316,6 +354,20 @@ button {
   opacity: 1;
 }
 
+.search-bar input::-webkit-search-cancel-button {
+  width: 18px;
+  height: 18px;
+  margin-left: 14px;
+  margin-right: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  background: #111111;
+  cursor: pointer;
+  opacity: 1;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5.7 4.3 12 10.6l6.3-6.3 1.4 1.4-6.3 6.3 6.3 6.3-1.4 1.4-6.3-6.3-6.3 6.3-1.4-1.4 6.3-6.3-6.3-6.3 1.4-1.4Z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5.7 4.3 12 10.6l6.3-6.3 1.4 1.4-6.3 6.3 6.3 6.3-1.4 1.4-6.3-6.3-6.3 6.3-1.4-1.4 6.3-6.3-6.3-6.3 1.4-1.4Z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
 .search-bar button {
   height: 40px;
   border: 2px solid var(--line);
@@ -328,6 +380,91 @@ button {
   line-height: 1.35;
   letter-spacing: 0;
   text-transform: none;
+}
+
+.search-bar .ask-search-button {
+  position: relative;
+  isolation: isolate;
+  min-width: 96px;
+  height: 42px;
+  padding: 0 18px;
+  display: inline-flex;
+  justify-self: end;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #17171b;
+  font-family: Avenir, "Avenir Next", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow: 0 0 16px rgba(117, 189, 232, 0.42), 0 0 22px rgba(227, 31, 38, 0.22);
+}
+
+.search-bar .ask-search-button::before {
+  content: "";
+  position: absolute;
+  inset: -28px;
+  z-index: -2;
+  background: conic-gradient(from 0deg, #75bde8 0 22%, #ffffff 22% 31%, #e31f26 31% 45%, #ffffff 45% 56%, #75bde8 56% 75%, #e31f26 75% 88%, #ffffff 88% 100%);
+  animation: chicagoFlagSpin 2.8s linear infinite;
+}
+
+.search-bar .ask-search-button::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  z-index: -1;
+  border-radius: inherit;
+  background: #ffffff;
+  box-shadow: inset 0 0 0 1.5px #2f2f2f;
+}
+
+.search-bar .ask-search-button:hover,
+.search-bar .ask-search-button:focus-visible {
+  box-shadow: 0 0 20px rgba(117, 189, 232, 0.62), 0 0 28px rgba(227, 31, 38, 0.34);
+  transform: translateY(-1px);
+}
+
+.search-bar .ask-search-button:focus-visible {
+  outline: 3px solid rgba(117, 189, 232, 0.42);
+  outline-offset: 3px;
+}
+
+.search-bar .ask-search-button:disabled {
+  cursor: wait;
+  opacity: 0.8;
+}
+
+.ask-search-icon,
+.ask-search-label {
+  position: relative;
+  z-index: 1;
+}
+
+.ask-search-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+@keyframes chicagoFlagSpin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .search-bar .ask-search-button::before {
+    animation: none;
+  }
 }
 
 .toolbar {
@@ -488,10 +625,16 @@ button {
   max-width: none;
   min-height: 52px;
   height: 52px;
-  grid-template-columns: 1fr 120px;
-  gap: 10px;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  gap: 8px;
   align-items: center;
-  padding: 4px 8px 4px 16px;
+  padding: 4px 8px 4px 48px;
+}
+
+.results-filters .search-bar::before {
+  left: 18px;
+  width: 19px;
+  height: 19px;
 }
 
 .results-filters .search-bar input {
@@ -509,6 +652,31 @@ button {
   letter-spacing: 0.04em;
   padding: 0;
   transform: translateY(-1px);
+}
+
+.results-filters .search-bar .ask-search-button {
+  min-width: 88px;
+  height: 38px;
+  gap: 5px;
+  padding: 0 14px;
+  font-size: 14px;
+  letter-spacing: 0;
+  transform: translateY(-1px);
+}
+
+.results-filters .ask-search-icon {
+  font-size: 17px;
+}
+
+.results-disclaimer {
+  max-width: 980px;
+  margin: 10px auto 14px;
+  color: rgba(31, 31, 31, 0.58);
+  font-family: "Inter", "Avenir Next", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.45;
+  text-align: center;
 }
 
 .results-meta {
@@ -551,15 +719,16 @@ button {
 }
 
 .map-mode .results-meta {
-  position: sticky;
-  top: 0;
+  position: static;
   margin: 0;
   min-height: 0;
-  padding: 7px 16px 16px;
+  padding: 10px 16px 12px;
   background: var(--white);
-  z-index: 2;
   border-bottom: 1px solid #ececec;
-  line-height: 1.2;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  flex: 0 0 auto;
 }
 
 .map-mode .map-shell {
@@ -675,6 +844,81 @@ button {
   background: var(--status-refresh);
 }
 
+.card-badge.status-evidence-high {
+  background: #c8efd8;
+}
+
+.card-badge.status-evidence-medium {
+  background: var(--light-blue);
+}
+
+.card-badge.status-evidence-low {
+  background: var(--status-note);
+}
+
+.card-badge.status-evidence-unknown {
+  background: #eeeeee;
+}
+
+.card-evidence {
+  margin-top: 12px;
+  display: grid;
+  gap: 6px;
+}
+
+.card-evidence-title {
+  margin: 0;
+  color: #626262;
+  font-family: Avenir, "Avenir Next", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.card-evidence-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+}
+
+.card-evidence-list a {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  padding: 4px 9px;
+  border: 1px solid #d5d5d5;
+  border-radius: 999px;
+  color: #202020;
+  background: #fafafa;
+  font-family: Avenir, "Avenir Next", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.card-evidence-list a:hover {
+  border-color: #2a2a2a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.card-ai-reason {
+  margin: 12px 0 0;
+  padding: 10px 11px;
+  border-left: 3px solid #74b8dc;
+  background: #f7fbfe;
+  color: #414141;
+  font-family: Avenir, "Avenir Next", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.35;
+}
 
 .map-view,
 .info-section {
@@ -737,6 +981,15 @@ button {
 
 .suggest-copy p {
   max-width: 420px;
+}
+
+.suggest-copy .suggest-privacy-note {
+  max-width: 420px;
+  margin-top: 10px;
+  color: rgba(31, 31, 31, 0.56);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.45;
 }
 
 .suggest-form {
@@ -1065,12 +1318,18 @@ button {
 
   .search-bar {
     max-width: 100%;
-    grid-template-columns: minmax(0, 1fr) 180px;
+    grid-template-columns: minmax(0, 1fr) max-content;
     min-height: 58px;
     margin-top: 28px;
-    padding: 8px 10px 8px 18px;
+    padding: 8px 10px 8px 48px;
     gap: 12px;
     border-radius: 30px;
+  }
+
+  .search-bar::before {
+    left: 18px;
+    width: 20px;
+    height: 20px;
   }
 
   .search-bar input {
@@ -1079,6 +1338,12 @@ button {
 
   .search-bar button {
     height: 42px;
+  }
+
+  .search-bar .ask-search-button {
+    min-width: 92px;
+    height: 42px;
+    padding: 0 16px;
   }
 
   .distance-button,
@@ -1117,6 +1382,7 @@ button {
   }
 
   .map-mode .results-sidebar {
+    height: auto;
     max-height: none;
     overflow: visible;
     padding-right: 0;
@@ -1258,16 +1524,29 @@ button {
   }
 
   .search-bar {
-    grid-template-columns: minmax(0, 1fr) 150px;
+    grid-template-columns: minmax(0, 1fr) max-content;
     min-height: 54px;
     margin-top: 46px;
-    padding: 7px 8px 7px 14px;
+    padding: 7px 8px 7px 44px;
     border-radius: 26px;
+  }
+
+  .search-bar::before {
+    left: 16px;
+    width: 18px;
+    height: 18px;
   }
 
   .search-bar input,
   .search-bar button {
     font-size: 15px;
+  }
+
+  .search-bar .ask-search-button {
+    min-width: 88px;
+    height: 40px;
+    padding: 0 14px;
+    font-size: 14px;
   }
 
   .search-bar button {

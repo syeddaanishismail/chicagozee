@@ -23,6 +23,14 @@
       <video class="background-video" autoplay muted loop playsinline preload="auto">
         <source src="assets/background.mp4" type="video/mp4" />
       </video>
+      <a
+        class="background-credit"
+        href="https://www.pexels.com/video/aerial-view-of-city-from-a-helicopter-2771611/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Background video by Ricky Esquivel via Pexels
+      </a>
     </div>
     <header class="site-header" id="home">
       <div class="header-inner">
@@ -72,10 +80,10 @@
             <input
               id="search-input"
               type="search"
-              placeholder="Try 'Bucktown', 'Biryani' or 'Bundoo Khan'..."
+              placeholder="Search"
               autocomplete="off"
             />
-            <button type="submit">Search</button>
+            <button class="ask-search-button" type="button" aria-label="Ask ChicagoZee"><span class="ask-search-icon" aria-hidden="true">✧</span><span class="ask-search-label">Ask</span></button>
           </form>
         </div>
       </section>
@@ -97,6 +105,10 @@
           </label>
           <button class="filter-reset" id="filters-reset-button" type="button">Reset</button>
         </div>
+
+        <p class="results-disclaimer">
+          ChicagoZee is an informational directory. Halal status may change. Please verify directly with the restaurant before ordering.
+        </p>
 
         <div class="results-layout">
           <div class="results-sidebar">
@@ -141,6 +153,9 @@
             <p>
               Know a halal restaurant that should be on ChicagoZee? Send the name,
               location, and what makes it halal so it can be reviewed before it goes live.
+            </p>
+            <p class="suggest-privacy-note">
+              Suggestions are sent by email through a third-party form service. Please do not include sensitive information.
             </p>
           </div>
 
