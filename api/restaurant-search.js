@@ -85,6 +85,25 @@ const FOOD_MENU_HINT_TERMS = new Set([
   "steak", "taco", "tacos", "thai", "turkish", "wings",
 ]);
 
+const NAME_CUISINE_HINTS = [
+  { terms: ["salsa", "taco", "tacos", "taqueria", "burrito"], hints: ["mexican", "latin", "tacos"] },
+  { terms: ["biryani", "hyderabad", "hyderabadi", "dosa", "tandoor", "tandoori", "curry"], hints: ["indian", "pakistani", "south asian"] },
+  { terms: ["nihari", "karahi", "lahore", "pakistan", "pakistani"], hints: ["pakistani", "south asian"] },
+  { terms: ["kabob", "kabab", "kebab", "shawarma", "falafel", "hummus", "pita"], hints: ["mediterranean", "middle eastern"] },
+  { terms: ["mandi", "yemen", "yemeni"], hints: ["yemeni", "arabic", "middle eastern"] },
+  { terms: ["gyro", "gyros"], hints: ["mediterranean", "greek", "middle eastern"] },
+  { terms: ["burger", "burgers", "fries", "smash", "slider"], hints: ["burgers", "american"] },
+  { terms: ["pizza", "pizzeria"], hints: ["pizza", "italian"] },
+  { terms: ["wing", "wings", "broast", "broasted"], hints: ["wings", "chicken", "american"] },
+  { terms: ["thai"], hints: ["thai"] },
+  { terms: ["chinese", "hakka", "noodle", "noodles"], hints: ["chinese", "indo chinese"] },
+  { terms: ["turkish", "doner"], hints: ["turkish", "mediterranean"] },
+  { terms: ["somali", "safari"], hints: ["somali", "east african"] },
+  { terms: ["afghan", "afghani"], hints: ["afghan", "central asian"] },
+  { terms: ["steak", "steakhouse"], hints: ["steak", "american"] },
+  { terms: ["cafe", "bakery", "sweet", "sweets"], hints: ["dessert", "cafe"] },
+];
+
 function getMenuQueryTokens(query) {
   return normalizeForSearch(query)
     .split(" ")
@@ -206,6 +225,22 @@ async function addMenuEvidenceToMatches({ query, restaurants, matches, aiResult 
     menuSearchUsed: true,
   };
 }
+
+function inferCuisineHintsFromName(name) {
+  const normalizedName = normalizeForSearch(name);
+  if (!normalizedName) {
+    return [];
+  }
+
+  return [
+    ...new Set(
+      NAME_CUISINE_HINTS
+        .filter(({ terms }) => terms.some((term) => normalizedName.includes(normalizeForSearch(term))))
+        .flatMap(({ hints }) => hints)
+    ),
+  ].slice(0, 5);
+}
+
 function compactRestaurant(restaurant, index) {
   return {
     id: index,
@@ -213,6 +248,7 @@ function compactRestaurant(restaurant, index) {
     area: normalize(restaurant.subtitle),
     address: normalize(restaurant.address),
     status: normalize(restaurant.badge),
+    nameCuisineHints: inferCuisineHintsFromName(restaurant.name),
     keywords: Array.isArray(restaurant.searchKeywords)
       ? restaurant.searchKeywords.map(normalize).filter(Boolean).slice(0, 8)
       : [],
@@ -342,6 +378,8 @@ async function callGemini({ query, candidates }) {
             "Rank only restaurants from the provided JSON list.",
             "Never invent restaurants, addresses, IDs, or halal claims.",
             "A user may ask for vibe, cuisine, dish type, occasion, neighborhood, or quality.",
+            "For cuisine searches, analyze restaurant names, nameCuisineHints, and keywords.",
+            "Restaurant names can imply cuisine, such as Salsa implying Mexican/Latin, but say when the match is inferred from the name.",
             "If the user is asking for a food, dish, or cuisine type that should be checked against menus, set menuSearchRecommended to true.",
             "If the exact request is not represented, return the closest existing restaurants and set fallbackUsed to true.",
             "Keep summary under 110 characters so it fits in a compact results header.",

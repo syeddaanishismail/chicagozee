@@ -84,6 +84,7 @@ const SEARCH_ALIASES = {
   mandi: ["mandi", "yemeni", "yemen", "hadramout"],
   somali: ["somali", "safari"],
   tacos: ["taco", "tacos"],
+  mexican: ["mexican", "taco", "tacos", "burrito", "burritos", "quesadilla", "quesadillas"],
   turkish: ["turkish", "turkey", "doner", "kebab", "tostini"],
   dessert: ["dessert", "desserts", "sweets", "bakery", "cafe"],
 };
@@ -97,6 +98,7 @@ const FALLBACK_SEARCHES = [
   "pizza",
   "kabob",
   "shawarma",
+  "mexican"
 ];
 
 const AI_INTENT_TERMS = [
@@ -127,7 +129,7 @@ const AI_INTENT_TERMS = [
 ];
 
 const aiSearchCache = new Map();
-const AI_CACHE_STORAGE_PREFIX = `chicagozee-ai-search-v1-${restaurants.length}`;
+const AI_CACHE_STORAGE_PREFIX = `chicagozee-ai-search-v2-${restaurants.length}`;
 const AI_USER_REQUEST_LIMIT = 3;
 const AI_USER_USAGE_STORAGE_KEY = "chicagozee-ai-user-usage-v1";
 let fallbackAiUsageCount = 0;

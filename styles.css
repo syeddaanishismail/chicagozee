@@ -1300,6 +1300,26 @@ button {
     transform: scale(1.03);
   }
 
+  .background-credit {
+    top: 8px;
+    right: 10px;
+    max-width: 150px;
+    padding: 0;
+    background: transparent;
+    color: rgba(17, 17, 17, 0.24);
+    font-size: 7px;
+    font-weight: 500;
+    line-height: 1.15;
+    text-align: right;
+    text-shadow: 0 1px 8px rgba(255, 255, 255, 0.32);
+  }
+
+  .background-credit:hover,
+  .background-credit:focus-visible {
+    background: transparent;
+    color: rgba(17, 17, 17, 0.44);
+  }
+
   .hero-section {
     min-height: 500px;
     padding-top: 34px;
@@ -1445,6 +1465,12 @@ button {
 
   .background-video {
     object-position: 60% 40%;
+  }
+
+  .background-credit {
+    max-width: 118px;
+    font-size: 6px;
+    opacity: 0.72;
   }
 
   .header-inner {
