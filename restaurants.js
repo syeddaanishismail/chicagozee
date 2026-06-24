@@ -2400,7 +2400,10 @@ window.RESTAURANTS = [
     "lat": 41.9469201,
     "lng": -87.6881529,
     "halalEvidence": [],
-    "searchKeywords": []
+    "searchKeywords": [
+      "Mexican",
+      "Tacos"
+    ]
   },
   {
     "name": "SALT burgers + fries",
