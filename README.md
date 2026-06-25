@@ -1,6 +1,7 @@
 # ChicagoZee
 
 https://www.chicagozee.com/
+
 ChicagoZee is a Chicagoland halal restaurant discovery website. It helps users search and explore halal restaurants by name, area, cuisine, halal status, and map location.
 
 ## Features
