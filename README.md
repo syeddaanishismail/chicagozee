@@ -101,6 +101,50 @@ Project Settings -> Environment Variables
 
 After updating environment variables, redeploy the site so the serverless function receives the new values.
 
+## Mobile App Setup
+
+ChicagoZee includes a Capacitor mobile shell that loads the deployed Vercel app:
+
+```text
+https://chicagozee.vercel.app
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Check Capacitor:
+
+```bash
+npm run cap:doctor
+```
+
+Android has been added through Capacitor. To sync and open it:
+
+```bash
+npm run cap:sync
+npm run cap:open:android
+```
+
+To add iOS, install full Xcode first. CocoaPods is also required:
+
+```bash
+brew install cocoapods
+export LANG=en_US.UTF-8
+```
+
+After Xcode is installed from the App Store, select it and create the iOS project:
+
+```bash
+sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+npm run cap:add:ios
+npm run cap:open:ios
+```
+
+API keys should stay in Vercel environment variables, not inside the mobile app.
+
 ## Notes
 
 ChicagoZee is an informational directory. Halal status may change, so users should verify directly with the restaurant before ordering.

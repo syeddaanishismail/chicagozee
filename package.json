@@ -1,0 +1,24 @@
+{
+  "name": "chicagozee",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ChicagoZee halal restaurant discovery website and mobile shell.",
+  "scripts": {
+    "dev": "vercel dev",
+    "mobile:build": "node scripts/build-mobile.js",
+    "cap:doctor": "cap doctor",
+    "cap:sync": "npm run mobile:build && LANG=en_US.UTF-8 cap sync",
+    "cap:add:ios": "LANG=en_US.UTF-8 cap add ios",
+    "cap:add:android": "cap add android",
+    "cap:open:ios": "cap open ios",
+    "cap:open:android": "cap open android"
+  },
+  "dependencies": {
+    "@capacitor/core": "^7.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/cli": "^7.0.0",
+    "@capacitor/ios": "^7.0.0"
+  }
+}

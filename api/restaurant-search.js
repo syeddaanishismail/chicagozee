@@ -280,9 +280,17 @@ function extractJson(content) {
 
 function sendJson(response, statusCode, payload) {
   response.statusCode = statusCode;
+  setCorsHeaders(response);
   response.setHeader("Content-Type", "application/json");
   response.setHeader("Cache-Control", "no-store");
   response.end(JSON.stringify(payload));
+}
+
+function setCorsHeaders(response) {
+  response.setHeader("Access-Control-Allow-Origin", "*");
+  response.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  response.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  response.setHeader("Access-Control-Max-Age", "86400");
 }
 
 function getCacheKey({ query, area, status }) {
@@ -428,9 +436,16 @@ async function callGemini({ query, candidates }) {
 
 module.exports = async function handler(request, response) {
   loadLocalEnv();
+  setCorsHeaders(response);
+
+  if (request.method === "OPTIONS") {
+    response.statusCode = 204;
+    response.end();
+    return;
+  }
 
   if (request.method !== "POST") {
-    response.setHeader("Allow", "POST");
+    response.setHeader("Allow", "POST, OPTIONS");
     sendJson(response, 405, { error: "Method not allowed." });
     return;
   }

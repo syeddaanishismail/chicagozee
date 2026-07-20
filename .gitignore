@@ -1,6 +1,12 @@
 .DS_Store
+node_modules/
 .env
 .env.local
 config.js
 Home _ Chicagozee_files/
 .vercel
+ios/App/Pods/
+ios/App/App.xcodeproj/xcuserdata/
+ios/App/App.xcworkspace/xcuserdata/
+android/.gradle/
+android/app/build/

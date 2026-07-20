@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#da2929" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>ChicagoZee</title>
+    <script src="mobile-boot.js"></script>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mobile.css" />
+  </head>
+  <body>
+    <div class="app-loading-screen" id="app-loading-screen" aria-label="Loading ChicagoZee">
+      <img class="app-loading-logo" src="assets/favicon.png" alt="ChicagoZee" />
+    </div>
+
+    <div class="background-media" aria-hidden="true">
+      <img class="background-image" src="assets/background.png" alt="" />
+    </div>
+    <header class="site-header" id="home">
+      <div class="header-inner">
+        <a class="logo-link" href="#home" aria-label="ChicagoZee home">
+          <img class="site-logo" src="assets/logo.png" alt="ChicagoZee" />
+        </a>
+
+        <a class="suggest-button suggest-button-mobile" href="#suggest">Suggest a Spot</a>
+
+        <nav class="site-nav" aria-label="Primary">
+          <a class="nav-link is-active" href="#search">Home</a>
+          <a class="nav-link" href="#about">About &amp; Contact</a>
+        </nav>
+
+        <a class="suggest-button" href="#suggest">Suggest a Spot</a>
+
+        <button
+          class="mobile-menu-button"
+          id="mobile-menu-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-nav-menu"
+          aria-label="Open navigation menu"
+        >
+          <span class="mobile-menu-button-label">Menu</span>
+          <span class="mobile-menu-button-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav-menu hidden" id="mobile-nav-menu" aria-label="Mobile">
+        <a class="mobile-nav-link" href="#search">Home</a>
+        <a class="mobile-nav-link" href="#about">About &amp; Contact</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="hero-section">
+        <div class="hero-copy-wrap">
+          <h1>Find Zabihah Halal Food in Chicago!</h1>
+          <p class="hero-copy">
+            A simple, minimalist directory of Chicago restaurants. Search by neighborhood,
+            cuisine, or restaurant name.
+          </p>
+
+          <form class="search-bar" id="search-form" role="search">
+            <label class="sr-only" for="search-input">Search restaurants</label>
+            <input
+              id="search-input"
+              type="search"
+              placeholder="Search"
+              autocomplete="off"
+            />
+            <button class="ask-search-button" type="button" aria-label="Ask ChicagoZee"><span class="ask-search-icon" aria-hidden="true">✧</span><span class="ask-search-label">Ask</span></button>
+          </form>
+        </div>
+      </section>
+
+      <section class="results-section" id="search">
+        <div class="results-filters" aria-label="Results filters">
+          <div class="search-dock-slot" id="search-dock-slot" aria-hidden="true"></div>
+          <label class="filter-field filter-select" for="area-filter">
+            <span class="sr-only">Filter by area</span>
+            <select id="area-filter">
+              <option value="">All areas</option>
+            </select>
+          </label>
+          <label class="filter-field filter-select" for="status-filter">
+            <span class="sr-only">Filter by status</span>
+            <select id="status-filter">
+              <option value="">All statuses</option>
+            </select>
+          </label>
+          <button class="filter-reset" id="filters-reset-button" type="button">Reset</button>
+        </div>
+
+        <p class="results-disclaimer">
+          ChicagoZee is an informational directory. Halal status may change. Please verify directly with the restaurant before ordering.
+        </p>
+
+        <div class="results-layout">
+          <div class="results-sidebar">
+            <div class="results-meta" id="results-copy"></div>
+            <div class="card-grid" id="grid-view"></div>
+          </div>
+
+          <section class="map-view" id="map-view" aria-hidden="false">
+            <div class="map-shell">
+              <div class="map-header">
+                <h2>Chicago Map</h2>
+                <p>
+                  Showing restaurants with coordinates. If a spot is missing, it
+                  just needs lat/lng added to the dataset.
+                </p>
+              </div>
+              <div id="map" class="map-canvas" role="application" aria-label="Map view"></div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="info-section" id="about">
+        <div class="info-card">
+          <h2>About &amp; Contact</h2>
+          <p>
+            ChicagoZee is a certification-first directory focused on zabihah halal restaurants
+            in the city of Chicago. The current listing is powered by your curated Chicago
+            restaurant data.
+          </p>
+          <p>
+            For updates, corrections, or questions, add your preferred email or contact form
+            here next.
+          </p>
+        </div>
+      </section>
+
+      <section class="info-section" id="suggest">
+        <div class="info-card suggest-card">
+          <div class="suggest-copy">
+            <h2>Suggest a Spot</h2>
+            <p>
+              Know a halal restaurant that should be on ChicagoZee? Send the name,
+              location, and what makes it halal so it can be reviewed before it goes live.
+            </p>
+            <p class="suggest-privacy-note">
+              Suggestions are sent by email through a third-party form service. Please do not include sensitive information.
+            </p>
+          </div>
+
+          <form class="suggest-form" id="suggest-form">
+            <label class="suggest-trap" for="suggest-website">
+              <span>Website</span>
+              <input id="suggest-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+            </label>
+
+            <div class="suggest-form-grid">
+              <label class="suggest-field" for="suggest-name">
+                <span>Spot name</span>
+                <input id="suggest-name" name="spotName" type="text" autocomplete="organization" required />
+              </label>
+
+              <label class="suggest-field" for="suggest-location">
+                <span>Address or neighborhood</span>
+                <input id="suggest-location" name="location" type="text" autocomplete="street-address" required />
+              </label>
+
+              <label class="suggest-field" for="suggest-proof">
+                <span>Halal info</span>
+                <select id="suggest-proof" name="halalInfo" required>
+                  <option value="">Choose one</option>
+                  <option value="Certified halal">Certified halal</option>
+                  <option value="Muslim-owned">Muslim-owned</option>
+                  <option value="Halal menu/items">Halal menu/items</option>
+                  <option value="Needs verification">Needs verification</option>
+                </select>
+              </label>
+
+              <label class="suggest-field" for="suggest-contact">
+                <span>Your contact</span>
+                <input id="suggest-contact" name="contact" type="text" autocomplete="email" placeholder="Optional" />
+              </label>
+            </div>
+
+            <label class="suggest-field suggest-field-wide" for="suggest-notes">
+              <span>Notes</span>
+              <textarea
+                id="suggest-notes"
+                name="notes"
+                rows="4"
+                placeholder="Menu link, certification source, Instagram, or anything helpful"
+              ></textarea>
+            </label>
+
+            <label class="suggest-confirm">
+              <input id="suggest-halal-confirm" name="halalConfirm" type="checkbox" required />
+              <span>This spot serves halal food or has halal options.</span>
+            </label>
+
+            <div class="suggest-actions">
+              <button type="submit">Send Suggestion</button>
+              <p class="suggest-status" id="suggest-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <nav class="native-tab-bar" aria-label="App navigation">
+      <a class="native-tab-link" href="#home">Home</a>
+      <a class="native-tab-link" href="#search">Search</a>
+      <a class="native-tab-link" href="#map-view">Map</a>
+      <a class="native-tab-link" href="#suggest">Suggest</a>
+    </nav>
+
+    <template id="restaurant-card-template">
+      <article class="restaurant-card">
+        <div class="card-body">
+          <h2 class="card-title"></h2>
+          <p class="card-subtitle"></p>
+          <div class="card-badge-row">
+            <span class="card-badge"></span>
+          </div>
+          <div class="card-photo-credit hidden">
+            <a class="card-photo-credit-link" href="" target="_blank" rel="noreferrer"></a>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="restaurants.js"></script>
+    <script src="app.js"></script>
+    <script src="mobile-app.js"></script>
+  </body>
+</html>
